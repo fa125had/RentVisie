@@ -10,7 +10,9 @@ body {
   font-family: "poppins", sans-serif;
   margin: 0;
   background: #2c2c2c;
-  max-width: 100%;
+  width: 100%;
+  max-width: 650px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,20 +65,23 @@ main .damage-templates .car-templates img:hover {
 main .side-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
+  max-width: 100%;
+  overflow-x: scroll;
 }
-main .side-container .damage-pointer {
+main .damage-pointer {
   position: absolute;
   font-size: 1.5rem;
 }
-main .side-container .damage-pointer:hover {
+main .damage-pointer:hover {
   cursor: pointer;
 }
-main .side-container img {
+main img {
   object-fit: contain;
 }
-main .damages {
+
+.damages {
   max-width: 100%;
   height: 0;
   position: absolute;
@@ -85,7 +90,7 @@ main .damages {
   background: #2c2c2c;
   transition: height 300ms ease-in-out;
 }
-main .damages .modal {
+.damages .modal {
   color: #fff;
   text-align: left;
   padding: 2rem 1rem;
@@ -97,17 +102,17 @@ main .damages .modal {
   overflow-y: auto;
   position: relative;
 }
-main .damages .modal .close-btn-wrapper {
+.damages .modal .close-btn-wrapper {
   align-self: flex-end;
   position: absolute;
   top: 0;
   right: 0;
   padding: 1rem;
 }
-main .damages .modal .close-btn-wrapper #close-btn {
+.damages .modal .close-btn-wrapper #close-btn {
   font-weight: 700;
 }
-main .damages .modal .damages-content {
+.damages .modal .damages-content {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -115,7 +120,7 @@ main .damages .modal .damages-content {
   gap: 1rem;
   padding: 1rem;
 }
-main .damages .modal .damages-content .notes #notes img {
+.damages .modal .damages-content .notes #notes img {
   max-width: 10rem;
   object-fit: cover;
   padding: 2rem;

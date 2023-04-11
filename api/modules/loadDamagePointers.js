@@ -1,8 +1,11 @@
 import { loadDamageDetail } from "./loadDamageDetail.js";
 import { damagesURL } from "../renVisie.js";
-// import { reference } from "../renVisie.js";
 
 export const loadDamagePointers = (activeSide) => {
+
+    
+
+    //get damage templates
     fetch(damagesURL)
         .then((response) => {
             if (!response.ok) {
@@ -14,14 +17,16 @@ export const loadDamagePointers = (activeSide) => {
         })
         .then((data) => {
             const carDamages = data.vehicleDefects;
-            // console.log(carDamages);
 
+            //iterate through damage template array
             for (let i = 0; i < carDamages.length; i++) {
                 if (carDamages[i].templateSide === activeSide) {
-                    // console.log(carDamages[i].templateSide, activeSide);
 
+                    //get damage id
                     const damageId = carDamages[i].vehicleDefectId;
-                    const damageURL = `${damagesURL}/${damageId}`
+                    //define damage api url
+                    const damageURL = `${damagesURL}/${damageId}`;
+                    //get damage coordinates
                     const { x, y } = carDamages[i].templateCoordinates;
 
                     // Create a new DOM element for the damage pointer
@@ -36,7 +41,11 @@ export const loadDamagePointers = (activeSide) => {
                     damagePointer.style.top = `${y}px`;
                     damagePointer.style.left = `${x}px`;
 
-                    damagePointer.addEventListener('click', () => loadDamageDetail(damageURL));
+                    //Keep just Front side of car active for checking damage details
+                    if (carDamages[i].templateSide === 'Front') {
+                        damagePointer.addEventListener('click', () => loadDamageDetail(damageURL));
+                    }
+                    //add pointers to car photo
                     document.querySelector(".side-container").appendChild(damagePointer);
                 }
             }
