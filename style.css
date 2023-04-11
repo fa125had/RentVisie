@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   transition: 400ms all ease-in-out;
-  border: 1px solid;
 }
 
 body {
@@ -11,19 +10,16 @@ body {
   font-family: "poppins", sans-serif;
   margin: 0;
   background: #2c2c2c;
-  width: 100vw;
-  height: 100vh;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
   color: rgb(0, 24, 105);
 }
 
 header {
-  width: 414px;
-  max-width: 100%;
+  width: 100%;
   text-align: left;
   background: white;
 }
@@ -33,8 +29,7 @@ header .logo {
 }
 
 main {
-  width: 414px;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   background: #fff;
   display: flex;
@@ -66,18 +61,14 @@ main .damage-templates .car-templates img:hover {
   cursor: pointer;
 }
 main .side-container {
-  min-height: 320px;
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: center;
   position: relative;
 }
 main .side-container .damage-pointer {
   position: absolute;
   font-size: 1.5rem;
-  top: 0;
-  left: 0;
 }
 main .side-container .damage-pointer:hover {
   cursor: pointer;
@@ -86,7 +77,6 @@ main .side-container img {
   object-fit: contain;
 }
 main .damages {
-  width: 414px;
   max-width: 100%;
   height: 0;
   position: absolute;
@@ -104,7 +94,6 @@ main .damages .modal {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
-  height: 100%;
   overflow-y: auto;
   position: relative;
 }
