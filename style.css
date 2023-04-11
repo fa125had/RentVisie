@@ -94,6 +94,9 @@ main .car-viewer .side-container {
   position: relative;
 }
 main .car-viewer h2 {
+  text-align: center;
+}
+main .car-viewer p {
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
