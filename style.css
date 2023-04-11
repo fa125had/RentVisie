@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 400ms all ease-in-out;
+  border: 1px solid;
+}
+
+body {
+  font-size: 16px;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  background: #2c2c2c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  color: rgb(0, 24, 105);
+}
+
+header {
+  width: 414px;
+  max-width: 100%;
+  text-align: left;
+  background: white;
+}
+header .logo {
+  max-width: 60%;
+  padding: 1rem;
+}
+
+main {
+  width: 414px;
+  max-width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .damage-templates {
+  text-align: right;
+  order: 5;
+  margin: auto;
+}
+main .damage-templates #change-view-icon {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+main .damage-templates .car-templates {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  gap: 1rem;
+  border-bottom: 1px solid #2c2c2c;
+}
+main .damage-templates .car-templates img {
+  max-width: 25%;
+}
+main .damage-templates .car-templates img:hover {
+  cursor: pointer;
+}
+main .side-container {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+main .side-container .damage-pointer {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+}
+main .side-container .damage-pointer:hover {
+  cursor: pointer;
+}
+main .side-container img {
+  object-fit: contain;
+}
+main .damages {
+  width: 414px;
+  max-width: 100%;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0px;
+  background: #2c2c2c;
+  transition: height 300ms ease-in-out;
+}
+main .damages .modal {
+  color: #fff;
+  text-align: left;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+main .damages .modal .close-btn-wrapper {
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+}
+main .damages .modal .close-btn-wrapper #close-btn {
+  font-weight: 700;
+}
+main .damages .modal .damages-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+main .damages .modal .damages-content .notes #notes img {
+  max-width: 10rem;
+  object-fit: cover;
+  padding: 2rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RentVisie</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://res.cloudinary.com/dzm89a21a/image/upload/v1681057946/rentVisie/logo_vsn13q.png" alt="Logo"
+            class="logo">
+    </header>
+    <main>
+        <section class="damage-templates">
+            <i class="fa-solid fa-sliders" id="change-view-icon"  style="color: #001869;"></i>
+            <nav class="car-templates">
+
+            </nav>
+            <!-- <h2 id="reference"></h2> -->
+            <p id="fileName"></p>
+            <!-- <button id="download-damage-templates-btn" type="button">Download damage Templates</button> -->
+
+        </section>
+
+        <section>
+            <h2 id="car-side-title"></h2>
+
+            <span class="side-container">
+            
+            </span>
+        </section>
+
+        <section class="damages">
+            <div class="modal">
+                <span class="close-btn-wrapper"><a id="close-btn">Close</a></span>
+                <span class="damages-content">
+                    <span class="date">
+                        <p>Date:</p>
+                        <p id="date"></p>
+                    </span>
+                    <span class="description">
+                        <p>Description:</p>
+                        <p id="description"></p>
+                    </span>
+                    <span class="notes">
+                        <p>Notes:</p>
+                        <div id="notes"></div>
+                    </span>
+                </span>
+            </div>
+        </section>
+        <!-- <button id="download-damages-btn" type="button">Load Damages</button> -->
+
+    </main>
+    <script src="https://kit.fontawesome.com/d8f9bdabf6.js" crossorigin="anonymous"></script>
+    <script type="module" src="./api/renVisie.js"></script>
+    <!-- <script src="./api/modules/loadTemplates.jsx"></script>     -->
+</body>
+
+</html>
