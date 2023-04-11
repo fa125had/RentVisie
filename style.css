@@ -8,15 +8,11 @@
 body {
   font-size: 16px;
   font-family: "poppins", sans-serif;
-  margin: 0;
+  margin: 0 auto;
   background: #2c2c2c;
   width: 100%;
   max-width: 650px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: rgb(0, 24, 105);
 }
 
@@ -26,7 +22,7 @@ header {
   background: white;
 }
 header .logo {
-  max-width: 60%;
+  max-width: 15rem;
   padding: 1rem;
 }
 
@@ -42,11 +38,23 @@ main {
 main .damage-templates {
   text-align: right;
   order: 5;
-  margin: auto;
+  max-width: 100%;
+  overflow-x: auto;
 }
-main .damage-templates #change-view-icon {
+main .damage-templates .template-content {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  font-size: 1.5rem;
+}
+main .damage-templates .template-content h2 {
+  font-size: 1.2rem;
+}
+main .damage-templates .template-content #change-view-icon {
+  font-size: 1.2rem;
+  color: #001869;
+  cursor: pointer;
 }
 main .damage-templates .car-templates {
   display: flex;
@@ -54,31 +62,50 @@ main .damage-templates .car-templates {
   align-items: center;
   overflow-x: auto;
   gap: 1rem;
-  border-bottom: 1px solid #2c2c2c;
 }
 main .damage-templates .car-templates img {
-  max-width: 25%;
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 main .damage-templates .car-templates img:hover {
   cursor: pointer;
 }
-main .side-container {
+main .template-header {
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+}
+main .car-viewer {
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+main .car-viewer .side-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  max-width: 100%;
-  overflow-x: scroll;
+}
+main .car-viewer h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
 }
 main .damage-pointer {
   position: absolute;
   font-size: 1.5rem;
+  background: rgba(2, 232, 184, 0.5);
+  border-radius: 1rem;
 }
 main .damage-pointer:hover {
   cursor: pointer;
-}
-main img {
-  object-fit: contain;
 }
 
 .damages {

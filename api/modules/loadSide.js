@@ -14,8 +14,7 @@ export const loadSide = (sideImgId = "Front-template", templateSide = "Front") =
     if (activeDamagePointers !== null) {
         templateContainer.removeChild(activeDamagePointers);
     }
-    const timeout1id = setTimeout(() => 1 * 1, 50000);
-    clearTimeout(timeout1id);
+    
 
     //clean previous damage pointers
     const sideContainer = document.querySelector(".side-container");
@@ -23,7 +22,7 @@ export const loadSide = (sideImgId = "Front-template", templateSide = "Front") =
     while (prevPointers.length > 0) {
         sideContainer.removeChild(prevPointers[0]);
     }
-
+    
     //set active template
     activeSide = templateSide;
 
