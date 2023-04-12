@@ -24,8 +24,10 @@ changeViewBtn.addEventListener("click", () => {
     document.querySelector(".car-templates").style.flexWrap = "wrap";
     document.querySelector(".car-templates").style.justifyContent =
       "space-evenly";
+    document.getElementById('change-view-icon').classList.add('fa-rotate-180');
     isFullView = true;
   } else if (isFullView) {
+    document.getElementById('change-view-icon').classList.remove('fa-rotate-180');
     document.querySelector(".car-templates").style.flexWrap = "nowrap";
     document.querySelector(".car-templates").style.justifyContent =
       "flex-start";
