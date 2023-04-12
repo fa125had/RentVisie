@@ -15,6 +15,13 @@ const changeViewBtn = document.getElementById("change-view-icon");
 
 window.onload = loadTemplates(templateURL);
 
+setTimeout(function() {
+  // Show the main content and hide the loading page
+  document.querySelector('.loading-box').style.display = 'none';
+  document.querySelector('.main').style.filter = 'none';
+
+}, 10000);
+
 closeBtn.addEventListener("click", () => {
   document.querySelector(".damages").style.height = "0%";
 });

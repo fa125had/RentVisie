@@ -15,6 +15,36 @@ body {
   height: 100vh;
   color: rgb(0, 24, 105);
 }
+body .loading-box {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body .loading-box .loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0, 24, 105, 0.6);
+  border-top-color: rgb(2, 232, 184);
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  z-index: 100;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 header {
   width: 100%;
@@ -33,6 +63,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  filter: blur(3px);
 }
 main .damage-templates {
   text-align: right;
@@ -61,6 +92,7 @@ main .damage-templates .car-templates {
   align-items: center;
   overflow-x: auto;
   gap: 1rem;
+  padding: 1rem;
 }
 main .damage-templates .car-templates img {
   width: 10rem;
