@@ -92,6 +92,7 @@ main .car-viewer .side-container {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  overflow-x: auto;
 }
 main .car-viewer h2 {
   text-align: center;

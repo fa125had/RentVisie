@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>RentVisie</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="https://res.cloudinary.com/dzm89a21a/image/upload/v1681057946/rentVisie/logo_vsn13q.png" alt="Logo"
-            class="logo">
+      <img
+        src="https://res.cloudinary.com/dzm89a21a/image/upload/v1681057946/rentVisie/logo_vsn13q.png"
+        alt="Logo"
+        class="logo"
+      />
     </header>
     <main>
-        <section class="damage-templates">
-            <span class="template-content">
-                <h2>Choose a side to load damages</h2>
-                <i class="fa-solid fa-square-caret-down" id="change-view-icon"></i>
+      <section class="damage-templates">
+        <span class="template-content">
+          <h2>Choose a side to load damages</h2>
+          <i class="fa-solid fa-square-caret-down" id="change-view-icon"></i>
+        </span>
+        <nav class="car-templates"></nav>
+      </section>
+
+      <section class="template-header">
+        <h2>View of the car</h2>
+      </section>
+
+      <section class="car-viewer">
+        <h2 id="car-side-title"></h2>
+        <span class="side-container"> </span>
+        <p>
+          Click on <span><i class="fa-solid fa-xmark"></i></span> to see damage
+          details
+        </p>
+      </section>
+
+      <section class="damages">
+        <div class="modal">
+          <span class="close-btn-wrapper"><a id="close-btn">Close</a></span>
+          <span class="damages-content">
+            <span class="date">
+              <p>Date:</p>
+              <p id="date"></p>
             </span>
-            <nav class="car-templates">
-
-            </nav>
-        </section>
-
-        <section class="template-header">
-            <h2>View of the car</h2>
-        </section>
-
-        <section class="car-viewer">
-            <h2 id="car-side-title"></h2>
-            <span class="side-container">
-
-
+            <span class="description">
+              <p>Description:</p>
+              <p id="description"></p>
             </span>
-            <p>Click on <span><i class="fa-solid fa-xmark"></i></span> to see damage details</p>
-        </section>
-
-        <section class="damages">
-            <div class="modal">
-                <span class="close-btn-wrapper"><a id="close-btn">Close</a></span>
-                <span class="damages-content">
-                    <span class="date">
-                        <p>Date:</p>
-                        <p id="date"></p>
-                    </span>
-                    <span class="description">
-                        <p>Description:</p>
-                        <p id="description"></p>
-                    </span>
-                    <span class="notes">
-                        <p>Notes:</p>
-                        <div id="notes"></div>
-                    </span>
-                </span>
-            </div>
-        </section>
-        <!-- <button id="download-damages-btn" type="button">Load Damages</button> -->
-
+            <span class="notes">
+              <p>Notes:</p>
+              <div id="notes"></div>
+            </span>
+          </span>
+        </div>
+      </section>
     </main>
-    <script src="https://kit.fontawesome.com/d8f9bdabf6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d8f9bdabf6.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="./api/renVisie.js"></script>
-    <!-- <script src="./api/modules/loadTemplates.jsx"></script>     -->
-</body>
-
+  </body>
 </html>
