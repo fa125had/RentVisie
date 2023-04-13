@@ -23,6 +23,7 @@ export const loadTemplates = (templateURL) => {
         const img = new Image();
         img.src = imageSrc;
         img.alt = side + " of car";
+        img.title = side + " of car";
         img.id = side + "-template";
         carTemplates.appendChild(img);
       }

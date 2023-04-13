@@ -93,6 +93,22 @@ main .damage-templates .car-templates {
   overflow-x: auto;
   gap: 1rem;
   padding: 1rem;
+  /* Style the scroll bar */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+main .damage-templates .car-templates::-webkit-scrollbar {
+  width: 10px;
+}
+main .damage-templates .car-templates::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+main .damage-templates .car-templates::-webkit-scrollbar-thumb {
+  background: #888;
+}
+main .damage-templates .car-templates::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 main .damage-templates .car-templates img {
   width: 10rem;
@@ -124,6 +140,22 @@ main .car-viewer .side-container {
   justify-content: flex-start;
   position: relative;
   overflow-x: auto;
+  /* Style the scroll bar */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+main .car-viewer .side-container::-webkit-scrollbar {
+  width: 10px;
+}
+main .car-viewer .side-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+main .car-viewer .side-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+main .car-viewer .side-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 main .car-viewer h2 {
   text-align: center;
@@ -173,6 +205,7 @@ main .damage-pointer:hover {
 }
 .damages .modal .close-btn-wrapper #close-btn {
   font-weight: 700;
+  cursor: pointer;
 }
 .damages .modal .damages-content {
   display: flex;

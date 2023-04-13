@@ -18,32 +18,35 @@ body {
   .loading-box {
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
-    align-items: center; 
-    position: absolute; 
+    align-items: center;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
+
     .loading-spinner {
-    width: 32px;
-    height: 32px;
-    border: 3px solid rgba(0, 24, 105, 0.6);
-    border-top-color: rgba(2, 232, 184, 1);
-    border-radius: 50%;
-    animation: rotate 1s infinite linear;
-    z-index: 100;
-      
-  }
-  
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-    
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(0, 24, 105, 0.6);
+      border-top-color: rgba(2, 232, 184, 1);
+      border-radius: 50%;
+      animation: rotate 1s infinite linear;
+      z-index: 100;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
 
@@ -67,8 +70,6 @@ main {
   justify-content: flex-start;
   align-items: center;
   filter: blur(3px);
-
-  
 
   .damage-templates {
     text-align: right;
@@ -101,6 +102,26 @@ main {
       overflow-x: auto;
       gap: 1rem;
       padding: 1rem;
+
+      /* Style the scroll bar */
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
 
       img {
         width: 10rem;
@@ -137,7 +158,27 @@ main {
       justify-content: flex-start;
       position: relative;
       overflow-x: auto;
+      /* Style the scroll bar */
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
     }
+
     h2 {
       text-align: center;
     }
@@ -191,6 +232,7 @@ main {
 
       #close-btn {
         font-weight: 700;
+        cursor: pointer;
       }
     }
 

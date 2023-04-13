@@ -1,7 +1,9 @@
 import { loadDamageDetail } from "./loadDamageDetail.js";
 import { damagesURL } from "../renVisie.js";
+import { loading } from "./loading.js";
 
 export const loadDamagePointers = (activeSide) => {
+  loading(3000);
   //get damage templates
   fetch(damagesURL)
     .then((response) => {

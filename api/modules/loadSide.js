@@ -1,4 +1,5 @@
 import { loadDamagePointers } from "./loadDamagePointers.js";
+import { loading } from "./loading.js";
 
 const templateContainer = document.querySelector(".side-container");
 const carSideTitle = document.getElementById("car-side-title");
